@@ -1,6 +1,3 @@
-// Carga de productos mediante Fetch, Async y Await para renderizar el catálogo en el HTML
-
-// Función asincrónica para obtener los datos de los productos
 async function cargarProductos() {
     try {
         var resultado = await fetch("http://localhost:3000/productos");
@@ -16,14 +13,12 @@ async function cargarProductos() {
     return datos.productos || datos;
 }
 
-// Función asincrónica para insertar cada tarjeta de producto en el contenedor
 async function pintarProductos() {
     let productos = await cargarProductos();
     let divproductos = document.getElementById("productos");
 
     divproductos.innerHTML = "";
 
-    // Ciclo para recorrer cada producto y mostrar sus datos en pantalla
     productos.forEach(producto => {
         divproductos.innerHTML += `
             <div class="card-producto">
@@ -37,5 +32,4 @@ async function pintarProductos() {
     });
 }
 
-// Ejecución de la función principal
 pintarProductos();
