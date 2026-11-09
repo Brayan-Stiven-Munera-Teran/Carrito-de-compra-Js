@@ -1,64 +1,65 @@
 {
   "productos": [
     {
-      "id": 1,
       "nombre": "Arroz",
-      "precio": 3000,
-      "stock": 10
+      "stock": "10",
+      "precio": "10000",
+      "id": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Huevo",
       "precio": 600,
       "stock": 30
     },
     {
-      "id": 3,
       "nombre": "Leche",
-      "precio": 4500,
-      "stock": 15
+      "stock": "1500",
+      "precio": "6000",
+      "id": "3"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Pan Tajado",
       "precio": 5200,
       "stock": 20
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Café",
       "precio": 8500,
       "stock": 12
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Azúcar",
       "precio": 3200,
       "stock": 25
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "Aceite Vegetal",
       "precio": 9800,
       "stock": 8
     },
     {
-      "id": 8,
-      "nombre": "Lentejas",
-      "precio": 4000,
-      "stock": 18
+      "nombre": "Lentejitas",
+      "stock": "180",
+      "precio": "4000",
+      "id": "8"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Pasta Spaghetti",
       "precio": 2800,
       "stock": 22
     },
     {
-      "id": 10,
       "nombre": "Sal Marina",
-      "precio": 1500,
-      "stock": 35
+      "stock": "35",
+      "precio": "12000",
+      "id": "10"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

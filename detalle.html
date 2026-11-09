@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Detalle del Producto</h1>
+    <div id="detalleProducto"></div>
+
+    <script src="script.js"></script>
+    <script>
+        async function pintarDetalle() {
+            let params = new URLSearchParams(document.location.search);
+            let id = params.get("id");
+            let producto = await productoPorId(id);
+            let detalleProducto = document.getElementById("detalleProducto");
+
+            detalleProducto.innerHTML = `
+                <div class="card-producto card-detalle">
+                    <p><strong>ID:</strong> ${producto.id}</p>
+                    <h3>${producto.nombre}</h3>
+                    <p><strong>Precio:</strong> $${producto.precio}</p>
+                    <p><strong>Stock:</strong> ${producto.stock}</p>
+                    <a href="index.html">← Volver al listado</a>
+                </div>
+            `;
+        }
+
+        pintarDetalle();
+        
+    </script>
+</body>
+</html>
+
